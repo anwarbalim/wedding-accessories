@@ -2,111 +2,204 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wedding Accessories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Wedding Accessories</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background: #f8f8f8;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
         }
 
         header {
-            background: #fff0f5;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-            header h1 {
-                margin: 0;
-                color: #b76e79;
-            }
-
-        .featured {
-            background: #fff;
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-            .featured img {
-                max-width: 200px;
-                border-radius: 8px;
-            }
-
-        .products {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            padding: 2rem 1rem;
-        }
-
-        .product {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px #eee;
-            width: 220px;
+            background: #f8e1e9;
             padding: 1rem;
             text-align: center;
         }
 
-            .product img {
+        nav {
+            background: #d4a5a5;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 1.5rem;
+                font-weight: bold;
+            }
+
+                nav a:hover {
+                    color: #f8e1e9;
+                }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+            .product-card img {
                 max-width: 100%;
+                height: auto;
                 border-radius: 4px;
             }
 
-            .product h3 {
-                margin: 0.5rem 0 0.25rem;
-                color: #b76e79;
+            .product-card h3 {
+                margin: 0.5rem 0;
             }
 
-            .product p {
-                margin: 0.25rem 0 0.5rem;
-                color: #555;
+            .product-card p {
+                color: #777;
             }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+            .contact-form input, .contact-form textarea {
+                width: 100%;
+                padding: 0.8rem;
+                margin: 0.5rem 0;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .contact-form button {
+                background: #d4a5a5;
+                color: #fff;
+                border: none;
+                padding: 0.8rem 1.5rem;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .contact-form button:hover {
+                    background: #b58383;
+                }
 
         footer {
-            background: #fff0f5;
+            background: #d4a5a5;
+            color: #fff;
             text-align: center;
             padding: 1rem;
-            color: #b76e79;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Wedding Accessories</h1>
-        <p>Elegant essentials for your special day</p>
+        <h1>Elegant Wedding Accessories</h1>
     </header>
-    <section class="featured">
-        <h2>Featured Accessory</h2>
-        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Bridal Tiara">
-        <p>Stunning bridal tiara to complete your wedding look.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero" id="home">
+        <h1>Make Your Day Sparkle</h1>
+        <p>Discover exquisite wedding accessories for your perfect moment.</p>
+        <p>Looking for that Special Accessories that you can't find. Relax while we find it for you</p>
     </section>
-    <section class="products">
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Veil">
-            <h3>Classic Veil</h3>
-            <p>Delicate lace veil for timeless elegance.</p>
-        </div>
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Bouquet">
-            <h3>Bridal Bouquet</h3>
-            <p>Handcrafted floral bouquet with fresh blooms.</p>
-        </div>
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Cufflinks">
-            <h3>Elegant Cufflinks</h3>
-            <p>Silver cufflinks for the groom and groomsmen.</p>
-        </div>
-        <div class="product">
-            <img src="https://images.unsplash.com/photo-1526178613658-3f1622045557?auto=format&fit=crop&w=400&q=80" alt="Ring Pillow">
-            <h3>Ring Pillow</h3>
-            <p>Silk ring pillow for a memorable ceremony.</p>
-        </div>
-    </section>
+    <div class="container">
+        <section id="products">
+            <h2>Our Collection</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="images/pearlnecklace.png" alt="Bridal Necklace">
+                    <h3>Pearl Necklace</h3>
+                    <p>R89.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/veil.png" alt="Wedding Veil">
+                    <h3>Classic Veil</h3>
+                    <p>R49.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/Tiara.png" alt="Tiara">
+                    <h3>Crystal Tiara</h3>
+                    <p>R129.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/decor.png" alt="Wedding Decor">
+                    <h3>Floral Decor</h3>
+                    <p>R39.99</p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We specialize in handcrafted wedding accessories to make your special day unforgettable. From elegant jewelry to stunning veils, our products are designed with love and care.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
     <footer>
-        &copy; 2025 Wedding Accessories. All rights reserved.
+        <p>© 2025 Elegant Wedding Accessories. All rights reserved.</p>
     </footer>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert("Thank you for your message! We'll get back to you soon.");
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
